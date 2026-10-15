@@ -1,0 +1,26 @@
+name: ci
+on: [push, pull_request]
+env:
+  TRL_OFFLINE: "1"  # snapshot data only: no calls to the Yahoo endpoint from CI
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with: { fetch-depth: 1 }
+      - uses: actions/setup-node@v4
+        with: { node-version: 22, cache: npm }
+      - run: npm ci
+      - run: npm audit --omit=dev --audit-level=high
+      - run: npm test
+  ui:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with: { fetch-depth: 1 }
+      - uses: actions/setup-node@v4
+        with: { node-version: 22, cache: npm }
+      - run: npm ci
+      - run: npx playwright install --with-deps chromium
+      - run: npm run test:ui              # the app on its Node server
+      - run: npm run test:ui -- --static  # the GitHub Pages build, served from a subfolder

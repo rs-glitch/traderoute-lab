@@ -1,0 +1,29 @@
+{
+  "name": "traderoute-lab",
+  "version": "0.1.0",
+  "description": "Predicting stock markets honestly + a trader tool: live data, statistics, probabilistic forecasts, graded signals, and preference-driven trade routes with an interactive layer. Education and simulation only; not investment advice.",
+  "type": "module",
+  "license": "MIT",
+  "private": true,
+  "engines": {
+    "node": ">=22"
+  },
+  "scripts": {
+    "start": "node server/http.js",
+    "mcp": "node server/mcp.js",
+    "test": "node --test test/*.test.js",
+    "test:ui": "node test/ui-smoke.mjs",
+    "snapshot": "node server/data.js snapshot",
+    "demo": "node demo/start.mjs",
+    "demo:record": "node demo/record.mjs",
+    "build:static": "node scripts/build-static.mjs"
+  },
+  "dependencies": {
+    "@anthropic-ai/sdk": "^0.128.0",
+    "@modelcontextprotocol/sdk": "^1.0.0",
+    "zod": "^3.23.8"
+  },
+  "devDependencies": {
+    "playwright": "^1.63.0"
+  }
+}

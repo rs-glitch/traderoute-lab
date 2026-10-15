@@ -1,0 +1,9 @@
+Account Number,Account Name,Symbol,Description,Quantity,Last Price,Last Price Change,Current Value,Today's Gain/Loss Dollar,Total Gain/Loss Dollar,Cost Basis Total,Type
+X12345678,Individual,SPAXX**,HELD IN MONEY MARKET,,,,$5210.44,,,,Cash
+X12345678,Individual,GOOGL,ALPHABET INC CAP STK CL A,40,$338.17,+$2.10,$13526.80,+$84.00,+$6126.80,$7400.00,Cash
+X12345678,Individual,JPM,JPMORGAN CHASE & CO,25,$337.53,-$2.48,$8438.25,-$62.00,+$3438.25,$5000.00,Cash
+X12345678,Individual,GLD,SPDR GOLD SHARES,15,$392.88,-$7.20,$5893.20,-$108.00,+$1893.20,$4000.00,Cash
+Z98765432,Roth IRA,GOOGL,ALPHABET INC CAP STK CL A,10,$338.17,+$2.10,$3381.70,+$21.00,+$1381.70,$2000.00,Cash
+Z98765432,Roth IRA,QQQ,INVESCO QQQ TR UNIT SER 1,12,$741.95,-$6.10,$8903.40,-$73.20,+$3203.40,$5700.00,Cash
+Z98765432,Roth IRA,Pending Activity,,,,,$-150.00,,,,
+"The data and information in this spreadsheet is provided to you solely for your use and is not for distribution."
